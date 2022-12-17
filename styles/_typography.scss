@@ -1,0 +1,62 @@
+@import '_fonts';
+@import '_colors';
+@import '_rhythm-overrides';
+@import '~rhythm';
+
+@mixin heading-large() {
+  @include font-myriad-bold();
+  @include adjust-font-size-to(28px);
+}
+
+@mixin heading-medium() {
+  @include font-myriad-bold();
+  @include adjust-font-size-to(24px, 1.5);
+}
+
+@mixin heading-small() {
+  @include font-myriad-bold();
+  @include adjust-font-size-to(20px);
+}
+
+@mixin heading-micro() {
+  @include font-myriad-bold();
+  @include adjust-font-size-to(18px);
+}
+
+@mixin body-medium() {
+  @include adjust-font-size-to(18px);
+}
+
+@mixin body-regular() {
+  @include font-myriad-regular();
+  @include adjust-font-size-to(16px);
+  color: $gray-text;
+}
+
+@mixin body-small-text() {
+  @include adjust-font-size-to(14px);
+}
+
+@mixin body-small() {
+  @include body-small-text();
+  @include font-myriad-regular();
+  color: $gray-text;
+}
+
+@mixin body-extra-small() {
+  @include font-myriad-regular();
+  @include adjust-font-size-to(12px);
+  color: $gray-text;
+}
+
+@mixin delta-text() {
+  @include font-myriad-semibold();
+  @include adjust-font-size-to(18px);
+  color: $dark-grayish;
+}
+
+@mixin delta-text-small() {
+  @include font-myriad-semibold();
+  @include adjust-font-size-to(16px);
+  color: $dark-grayish;
+}

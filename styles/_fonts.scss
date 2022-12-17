@@ -1,0 +1,26 @@
+@import "~webexFontStyles/variables";
+
+/* Myriad pro font */
+
+/* Regular */
+@font-face {
+  font-family: "myriad-pro";
+  font-weight: 400;
+  font-display: swap;
+  src: url("#{$icomoon-font-path}/MyriadPro-Regular.woff2") format("woff2"),
+    url("#{$icomoon-font-path}/MyriadPro-Regular.woff") format("woff");
+}
+
+@mixin font-myriad() {
+  font-family: "myriad-pro", "Geneva", "Tahoma", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@function tracking($target) {
+  @return ($target / 1000) * 1em;
+}
+
+@mixin tracking($target) {
+  letter-spacing: tracking($target);
+}

@@ -1,0 +1,49 @@
+﻿// Brand Colors
+$red:             rgb(226,0,15);      // #e2000f;
+$red-strong:      rgb(182,0,15);      // #b6000f;
+
+$gray:            rgb(216,216,217);   // #d8d8d9;
+$gray-light:      rgb(124,124,124);   // #7c7c7c;
+$gray-soft:       rgb(235,235,235);   // #ebebeb;
+$gray-text:       rgb(104,104,104);   // #686868;
+$gray-img-bgr:    rgb(238,238,238);   // #eee;
+$gray-bg:         rgb(244,244,244);   // #f4f4f4;
+$gray-silver:     rgb(191,190,190);   //#bfbebe;
+$dark-grayish:    rgb(48,48,48);      // #303030;
+
+$gray-blue-dark:  #444c56;
+$gray-blue-light: rgb(150, 150, 150); // #969696;
+
+$white:           rgb(255,255,255);   // #fff;
+$black:           rgb(0,0,0);         // #000;
+
+$transparent:     rgba(0,0,0,0);
+
+$brown: rgb(208,168,109);
+$green: rgb(66, 168, 22);
+$menu-subtitle:   #c3c6ca;            // rgb(195, 198, 202)
+
+// Hover CTA buttons colors
+$alpha-hover:             #b5000c;    // #b5000c;
+$alpha-inverted-hover:    #e5e5e5;    // #e5e5e5;
+$beta-hover:              #262d36;    // #262d36;
+$gamma-hover:             #adadae;    // #adadae;
+$delta-hover:             #262d36;    // #262d36;
+
+// Disabled CTA buttons colors
+$alpha-disabled:          #f5a6ab;    // #f5a6ab;
+$alpha-inverted-disabled: #787d85;    // #787d85;
+$beta-disabled:           #b7babe;    // #b7babe;
+$gamma-disabled:          #f1f1f2;    // #f1f1f2;
+
+
+// Form-Controls
+$focus-control-border: $gray;
+$focus-control-shadow: $gray-light;
+
+//Footer background
+$gray-dark-footer:  #303030;
+$gray-light-footer: #484848;
+
+// Button and link focus color (accessibility)
+$accessibility-focus: #46B9F3;

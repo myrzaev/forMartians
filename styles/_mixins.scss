@@ -1,0 +1,186 @@
+@import '_breakpoints';
+@import '_rhythm-overrides';
+@import '_colors';
+@import '~rhythm';
+
+$component-margin: rhythm(2);
+$component-margin-mobile: rhythm(1);
+
+$item-margin: rhythm(2);
+$item-margin-mobile: rhythm(1);
+$item-second-row-margin: rhythm(1);
+
+$item-in-grey-full-bleed: rhythm(3);
+$item-in-grey-full-bleed-mobile: rhythm(2);
+
+$heading-without-breadcrumbs: rhythm(1);
+
+// Page Heading + Content:not(Tabs)
+@mixin space-of-first-components() {
+  // @include space-of-first-components();
+  margin-top: $component-margin;
+
+  @media #{$mobile} {
+    margin-top: $component-margin-mobile;
+  }
+}
+
+// component + component
+@mixin space-between-components() {
+  // @include space-between-components();
+  margin-bottom: $component-margin;
+
+  @media #{$mobile} {
+    margin-bottom: $component-margin-mobile;
+  }
+}
+
+// component -> (item + item)
+@mixin space-between-elements() {
+  // @include space-between-elements();
+  margin-bottom: $item-margin;
+
+  @media #{$mobile} {
+    margin-bottom: $item-margin-mobile;
+  }
+}
+
+@mixin splitted-space-between-elements() {
+  // @include splitted-space-between-elements();
+  margin-bottom: $item-margin / 2;
+  padding-bottom: $item-margin / 2;
+
+  @media #{$mobile} {
+    margin-bottom: $item-margin-mobile / 2;
+    padding-bottom: $item-margin-mobile / 2;
+  }
+}
+
+// component -> item:first-child
+@mixin space-of-first-element() {
+  // @include space-of-first-item();
+  margin-top: $item-margin;
+
+  @media #{$mobile} {
+    margin-top: $item-margin-mobile;
+  }
+}
+
+// component -> item:last-child
+@mixin space-of-last-element() {
+  // @include space-of-last-item();
+  margin-bottom: $item-margin;
+
+  @media #{$mobile} {
+    margin-bottom: $item-margin-mobile;
+  }
+}
+
+// menu -> heading (without breadcrumbs)
+@mixin space-menu-heading() {
+  // @include space-menu-heading();
+  margin-top: $heading-without-breadcrumbs;
+}
+
+// grey-bg full-bleed -> [spot-product, link-list, ]
+@mixin space-in-grey-full-bleed() {
+  // @include space-in-grey-full-bleed();
+  padding-top: $item-in-grey-full-bleed;
+  padding-bottom: $item-in-grey-full-bleed;
+
+  @media #{$uptotablet} {
+    padding-top: $item-in-grey-full-bleed-mobile;
+    padding-bottom: $item-in-grey-full-bleed-mobile;
+  }
+}
+
+// Spot-[single/multiple]-link
+@mixin space-spot-3-items() {
+  // @include space-spot-3-items();
+  @media #{$downtotablet} {
+    margin-top: $item-second-row-margin;
+    margin-bottom: 0;
+
+    &:nth-child(1),
+    &:nth-child(2) {
+      margin-top: 0;
+    }
+  }
+
+  @media #{$lg-screen} {
+    &:nth-child(3) {
+      margin-top: 0;
+    }
+  }
+
+  @media #{$uptotablet} {
+    margin-bottom: $item-margin-mobile;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// table -> next component (inside tabs)
+@mixin space-after-table-in-tabs() {
+  // @include space-after-table-in-tabs();
+  margin-bottom: $item-margin;
+
+  @media #{$mobile} {
+    margin-bottom: $item-margin-mobile;
+  }
+}
+
+@mixin link-style($border-color: 'auto') {
+  display: inline;
+
+  &,
+  &:focus,
+  &:visited {
+    color: $red;
+    @if $border-color == 'auto' {
+      border-bottom: 1px solid rgba(255, 255, 255, 0);
+    } @else {
+      border-bottom: 1px solid $border-color;
+    }
+  }
+
+  &:active {
+    color: $red-strong;
+    border-bottom: 1px solid $red-strong;
+  }
+}
+
+@mixin link-style-no-touch() {
+  &:hover {
+    color: $red-strong;
+    border-bottom: 1px solid $red-strong;
+  }
+}
+
+@mixin focused-form-control-outline() {
+  outline: none;
+  -webkit-appearance: none;
+  -webkit-box-shadow: inset 0 0 0 1px $focus-control-border, 0 0 7px $focus-control-shadow;
+  box-shadow: inset 0 0 0 1px $focus-control-border, 0 0 7px $focus-control-shadow;
+}
+
+@mixin accessibility-focus-outline() {
+  outline: 3px solid $accessibility-focus;
+}
+
+@mixin image-wrapper-reserve-height() {
+  position: relative;
+  width: 100%;
+  padding-top: 66.67%;
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

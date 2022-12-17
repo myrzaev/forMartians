@@ -1,0 +1,18 @@
+//breakpoints
+
+$mobile: 'only screen and (max-width: 480px)';
+$downtomobile: 'only screen and (min-width: 481px)';
+$tablet: 'only screen and (max-width: 768px)';
+$desktop: 'only screen and (min-width: 1200px)';
+$uptotablet: 'only screen and (max-width: 767px)';
+$downtotablet: 'only screen and (min-width: 768px)';
+
+$md-screen: 'only screen and (max-width: 1200px)';
+$sm-screen: 'only screen and (max-width: 991px)';
+$lg-screen: 'only screen and (min-width: 992px)';
+
+$exrtasmallmobile: 'only screen and (max-width: 320px)';
+
+$ie10plus: 'only screen and (-ms-high-contrast: active), (-ms-high-contrast: none)';
+
+$mobile-devices: 'only screen and (max-width: 1024px)';
